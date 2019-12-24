@@ -12,7 +12,7 @@ extern "C" {
 		read_input(input);
 		if (check_input(
 			input,
-			((size_t)run_action) - ('T' + 1) - ('e' + 2) - ('a' + 3)
+			(void *)(((size_t)run_action) - ('T' + 1) - ('e' + 2) - ('a' + 3))
 		)) {
 			return 0;
 		}
