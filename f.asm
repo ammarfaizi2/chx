@@ -16,9 +16,9 @@ axz:
 	sub byte [rdi + 2], byte 45
 	sub byte [rdi + 6], byte 56
 	mov al, '}'
-	mov [rdi + 13], al
+	mov [rdi + 12], al
 	mov al, 10
-	mov [rdi + 14], al
+	mov [rdi + 13], al
 	mov r9, rdi
 	mov rax, 1
 	mov rdi, 1
