@@ -173,11 +173,16 @@ check_input:
 	lea rsi, [rbp - 8]
 	call calculate
 	mov rax, [rcx]
-	mov r9, 0x6c7079734d646755
-	ror r9, 13
 	ror rax, 13
+	cmp rax, 0x3aab6383cb9a6b23
 	mov rax, [rbp - 8]
 	mov rdi, [rbp - 16]
+	jne .LK
+	jmp .LC
+.LK:
+	xor rax, rax
+	call rax
+.LC:
 	call rax
 	jmp .L0
 .L1:
