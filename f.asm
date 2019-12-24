@@ -45,14 +45,17 @@ calculate:
 	xor rax, rax
 	mov rdi, [rdi]
 	mov rsi, [rsi]
+	mov rsi, [rsi]
 
 	mov al, [rdi]
 	inc al
 	add rsi, rax
+
 	inc rdi
 	mov al, [rdi]
 	add al, 2
 	add rsi, rax
+
 	inc rdi
 	mov al, [rdi]
 	add al, 3
@@ -75,7 +78,7 @@ check_input:
 	lea rdi, [rbp - 16]
 	lea rsi, [rbp - 8]
 	call calculate
-	mov rax, [rbp - 16]
+	mov rax, [rbp - 8]
 	call rax
 .L1:
 	xor al, al
