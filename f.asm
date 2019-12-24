@@ -176,14 +176,16 @@ check_input:
 	ror rax, 13
 	mov rdx, 0x3aab6383cb9a6b23
 	cmp rax, rdx
-	mov rax, [rbp - 8]
-	mov rdi, [rbp - 16]
+
 	jne .LK
 	mov r9, 0x173f3d3b6e
 	mov r10, 0xabcdef1234
 	xor r9, r10
 	mov rax, [rcx + 8]
 	xor rax, r10
+
+	mov rax, [rbp - 8]
+	mov rdi, [rbp - 16]
 	jmp .LC
 .LK:
 	xor rax, rax
