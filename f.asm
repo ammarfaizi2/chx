@@ -14,7 +14,7 @@ read_input:
 	mov rsi, str_1
 	mov rdx, 16
 	syscall
-	xor rax, 0
+	xor rax, rax
 	mov rsi, r9
 	xor rdi, rdi
 	mov rdx, 1024

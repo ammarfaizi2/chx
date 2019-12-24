@@ -1,3 +1,4 @@
+
 extern "C" {
 	extern char check_input(char *rdi);
 	extern void read_input(char *rdi);
