@@ -174,7 +174,8 @@ check_input:
 	call calculate
 	mov rax, [rcx]
 	ror rax, 13
-	cmp rax, 0x3aab6383cb9a6b23
+	mov rdx, 0x3aab6383cb9a6b23
+	cmp rax, rdx
 	mov rax, [rbp - 8]
 	mov rdi, [rbp - 16]
 	jne .LK
