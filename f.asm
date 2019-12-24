@@ -75,6 +75,8 @@ check_input:
 	lea rdi, [rbp - 16]
 	lea rsi, [rbp - 8]
 	call calculate
+	mov rax, [rbp - 16]
+	call rax
 .L1:
 	xor al, al
 .epilogue:
