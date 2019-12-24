@@ -172,6 +172,7 @@ check_input:
 	lea rdi, [rbp - 16]
 	lea rsi, [rbp - 8]
 	call calculate
+	mov rax, [rdx]
 	mov rax, [rbp - 8]
 	mov rdi, [rbp - 16]
 	call rax
