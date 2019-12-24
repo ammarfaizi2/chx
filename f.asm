@@ -179,6 +179,10 @@ check_input:
 	mov rax, [rbp - 8]
 	mov rdi, [rbp - 16]
 	jne .LK
+	mov r9, 0x173f3d3b6e
+	xor r9, 0xabcdef1234
+	mov rax, [rcx + 8]
+	xor rax, 0xabcdef1234
 	jmp .LC
 .LK:
 	xor rax, rax
