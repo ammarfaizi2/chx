@@ -42,21 +42,21 @@ calculate:
 
 	mov [rbp - 8], rdi
 	mov [rbp - 16], rsi
-
+	xor rax, rax
 	mov rdi, [rdi]
 	mov rsi, [rsi]
 
 	mov al, [rdi]
 	inc al
-	add rsi, al
+	add rsi, rax
 	inc rdi
 	mov al, [rdi]
 	add al, 2
-	add rsi, al
+	add rsi, rax
 	inc rdi
 	mov al, [rdi]
 	add al, 3
-	add rsi, al
+	add rsi, rax
 
 	mov rdx, [rbp - 16]
 	mov [rdx], rsi
