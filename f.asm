@@ -9,8 +9,6 @@ section .data
 	str_3 db "Error!", 10
 	str_5 db "}"
 
-section .text
-
 axz:
 	sub byte [rdi + 1], byte 50
 	sub byte [rdi + 2], byte 45
