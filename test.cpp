@@ -8,7 +8,7 @@ extern "C" {
 
 	int main()
 	{
-		char input[1024];
+		char input[1024] = {0};
 		read_input(input);
 		if (check_input(
 			input,

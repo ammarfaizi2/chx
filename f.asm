@@ -154,6 +154,9 @@ calculate:
 	add al, 13
 	add rsi, rax
 	mov byte [rcx + 12], al
+	xor rax, rax
+	mov [rcx + 13], rax
+	mov [rcx + 13 + 8], rax
 
 	mov rdx, [rbp - 16]
 	mov [rdx], rsi
