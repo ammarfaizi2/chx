@@ -67,79 +67,93 @@ calculate:
 	xor rax, rax
 	mov rdi, [rdi]
 	mov rsi, [rsi]
+	lea rcx, [rdi + 32]
 
 	mov al, [rdi]
 	inc al
 	add rsi, rax
+	mov byte [rcx], al
 
 	inc rdi
 	mov al, [rdi]
 	add al, 2
 	add rsi, rax
+	mov byte [rcx + 1], al
 
 	inc rdi
 	mov al, [rdi]
 	add al, 3
 	add rsi, rax
+	mov byte [rcx + 2], al
 
 
 	inc rdi
 	mov al, [rdi]
 	add al, 4
 	add rsi, rax
+	mov byte [rcx + 3], al
 
 
 	inc rdi
 	mov al, [rdi]
 	add al, 5
 	add rsi, rax
+	mov byte [rcx + 4], al
 
 
 	inc rdi
 	mov al, [rdi]
 	add al, 6
 	add rsi, rax
+	mov byte [rcx + 5], al
 
 
 	inc rdi
 	mov al, [rdi]
 	add al, 7
 	add rsi, rax
+	mov byte [rcx + 6], al
 
 
 	inc rdi
 	mov al, [rdi]
 	add al, 8
 	add rsi, rax
+	mov byte [rcx + 7], al
 
 
 	inc rdi
 	mov al, [rdi]
 	add al, 9
 	add rsi, rax
+	mov byte [rcx + 8], al
 
 
 	inc rdi
 	mov al, [rdi]
 	add al, 10
 	add rsi, rax
+	mov byte [rcx + 9], al
 
 
 	inc rdi
 	mov al, [rdi]
 	add al, 11
 	add rsi, rax
+	mov byte [rcx + 10], al
 
 
 	inc rdi
 	mov al, [rdi]
 	add al, 12
 	add rsi, rax
+	mov byte [rcx + 11], al
 
 	inc rdi
 	mov al, [rdi]
 	add al, 13
 	add rsi, rax
+	mov byte [rcx + 12], al
 
 	mov rdx, [rbp - 16]
 	mov [rdx], rsi
