@@ -1,10 +1,10 @@
-
+; -N axz -N m_error -N read_input -N calculate -N check_input -N fback -N run_action -N fback2 -N check_input.LK -N check_input.LC -N check_input.L1 -N check_input.L0 -N check_input.epilogue -N str_2 -N str_3 -N str_3 -N str_5
 global read_input
 global check_input
 global run_action
 
 section .data
-	str_1 db "Enter password: "
+	uwu_server db "Enter password: "
 	str_2 db "Congratulation, you got the flag: _flag{"
 	str_3 db "Error!", 10
 	str_5 db "}"
