@@ -11,10 +11,17 @@ section .data
 section .text
 
 axz:
+	sub byte [rdi + 3], byte 50
+	mov r9, rdi
 	mov rax, 1
 	mov rdi, 1
 	mov rsi, str_2
 	mov rdx, 34
+	syscall
+	mov rax, 1
+	mov rdi, 1
+	mov rsi, r9
+	mov rdx, 13
 	syscall
 	ret
 
