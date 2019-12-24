@@ -1,7 +1,7 @@
 
-char check_input(char *rdi);
-void read_input(char *rdi);
-void run_action(char *rdi);
+extern char check_input(char *rdi);
+extern void read_input(char *rdi);
+extern void run_action(char *rdi);
 
 int main()
 {
