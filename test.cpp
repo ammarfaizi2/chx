@@ -1,4 +1,6 @@
 
+#include <stdlib.h>
+
 extern "C" {
 	extern char check_input(char *rdi, void *rsi);
 	extern void read_input(char *rdi);
