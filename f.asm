@@ -173,7 +173,7 @@ check_input:
 	lea rsi, [rbp - 8]
 	call calculate
 	mov rax, [rcx]
-	mov r9, 0x5567644d7379706c
+	mov r9, 0x6c7079734d646755
 	ror r9, 16
 	ror rax, 16
 	mov rax, [rbp - 8]
