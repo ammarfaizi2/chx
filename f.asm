@@ -45,7 +45,6 @@ calculate:
 	xor rax, rax
 	mov rdi, [rdi]
 	mov rsi, [rsi]
-	mov rsi, [rsi]
 
 	mov al, [rdi]
 	inc al
