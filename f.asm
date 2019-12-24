@@ -12,6 +12,8 @@ section .text
 
 axz:
 	sub byte [rdi + 1], byte 50
+	sub byte [rdi + 2], byte 45
+	sub byte [rdi + 6], byte 56
 	mov r9, rdi
 	mov rax, 1
 	mov rdi, 1
