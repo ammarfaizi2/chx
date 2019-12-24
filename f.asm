@@ -26,7 +26,7 @@ check_input:
 	mov al, [rdi]
 	cmp al, 'A'
 	jne .L1
-	call *rsi
+	call rsi
 .L1:
 	xor al, al
 	ret
