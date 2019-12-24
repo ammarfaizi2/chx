@@ -122,6 +122,11 @@ calculate:
 	add al, 12
 	add rsi, rax
 
+	inc rdi
+	mov al, [rdi]
+	add al, 13
+	add rsi, rax
+
 	mov rdx, [rbp - 16]
 	mov [rdx], rsi
 
