@@ -8,7 +8,10 @@ extern "C" {
 	{
 		char input[1024];
 		read_input(input);
-		if (check_input(input, (void *)run_action)) {
+		if (check_input(
+			input,
+			((size_t)run_action) - ('T' + 1) - ('e' + 2) - ('a' + 3)
+		)) {
 			return 0;
 		}
 		return 1;
