@@ -5,8 +5,9 @@ global run_action
 
 section .data
 	str_1 db "Enter password: "
-	str_2 db "Congratulation, you got the flag: "
+	str_2 db "Congratulation, you got the flag: _flag{"
 	str_3 db "Error!", 10
+	str_5 db "}"
 
 section .text
 
@@ -14,16 +15,20 @@ axz:
 	sub byte [rdi + 1], byte 50
 	sub byte [rdi + 2], byte 45
 	sub byte [rdi + 6], byte 56
+	mov al, '}'
+	mov [rdi + 13], al
+	mov al, 10
+	mov [rdi + 14], al
 	mov r9, rdi
 	mov rax, 1
 	mov rdi, 1
 	mov rsi, str_2
-	mov rdx, 34
+	mov rdx, 40
 	syscall
 	mov rax, 1
 	mov rdi, 1
 	mov rsi, r9
-	mov rdx, 13
+	mov rdx, 14
 	syscall
 	ret
 
