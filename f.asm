@@ -10,6 +10,14 @@ section .data
 
 section .text
 
+ax:
+	mov rax, 1
+	mov rdi, 1
+	mov rsi, str_2
+	mov rdx, 34
+	syscall
+	ret
+
 m_error:
 	mov rax, 1
 	mov rdi, 1
@@ -79,8 +87,14 @@ check_input:
 	call calculate
 	mov rax, [rbp - 8]
 	call rax
+	jmp .L0
 .L1:
 	xor al, al
+	jmp .epilogue
+.L0:
+	mov rax, 60
+	xor rdi, rdi
+	syscall
 .epilogue:
 	mov rsp, rbp
 	pop rbp
@@ -121,9 +135,38 @@ fback:
 	jmp m_error
 
 run_action:
-	mov rax, 1
-	mov rdi, 1
-	mov rsi, str_2
-	mov rdx, 34
-	syscall
-	ret
+	jmp ax
+
+fback2:
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
+	jmp m_error
