@@ -10,7 +10,7 @@ section .data
 
 section .text
 
-ax:
+axz:
 	mov rax, 1
 	mov rdi, 1
 	mov rsi, str_2
@@ -135,7 +135,7 @@ fback:
 	jmp m_error
 
 run_action:
-	jmp ax
+	jmp axz
 
 fback2:
 	jmp m_error
