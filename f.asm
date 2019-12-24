@@ -68,6 +68,60 @@ calculate:
 	add al, 3
 	add rsi, rax
 
+
+	inc rdi
+	mov al, [rdi]
+	add al, 4
+	add rsi, rax
+
+
+	inc rdi
+	mov al, [rdi]
+	add al, 5
+	add rsi, rax
+
+
+	inc rdi
+	mov al, [rdi]
+	add al, 6
+	add rsi, rax
+
+
+	inc rdi
+	mov al, [rdi]
+	add al, 7
+	add rsi, rax
+
+
+	inc rdi
+	mov al, [rdi]
+	add al, 8
+	add rsi, rax
+
+
+	inc rdi
+	mov al, [rdi]
+	add al, 9
+	add rsi, rax
+
+
+	inc rdi
+	mov al, [rdi]
+	add al, 10
+	add rsi, rax
+
+
+	inc rdi
+	mov al, [rdi]
+	add al, 11
+	add rsi, rax
+
+
+	inc rdi
+	mov al, [rdi]
+	add al, 12
+	add rsi, rax
+
 	mov rdx, [rbp - 16]
 	mov [rdx], rsi
 
@@ -86,6 +140,7 @@ check_input:
 	lea rsi, [rbp - 8]
 	call calculate
 	mov rax, [rbp - 8]
+	mov rdi, [rbp - 16]
 	call rax
 	jmp .L0
 .L1:
