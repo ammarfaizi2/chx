@@ -1,14 +1,12 @@
 
+global read_input
+global check_input
+global run_action
+
 section .data
 	str_1 db "Enter password: "
 
-
 section .text
-
-global read_input
-global check_input
-global run_act
-
 read_input:
 	mov rax, 1
 	mov r9, rdi
